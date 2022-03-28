@@ -59,6 +59,9 @@ router.get("/:code", async (req, res) => {
 
   const bulletin = await prisma.bulletin.findUnique({
     where: { code: data },
+    include: {
+      user: true,
+    },
   });
 
   if (!bulletin) {

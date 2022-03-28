@@ -18,6 +18,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/auth", authRouter);
 app.use("/bulletin", bulletinRouter);
 
-app.listen(3000, () => {
-  console.log("[express] Server started on port 3000");
+app.listen(4000, () => {
+  console.log("[express] Server started on port 4000");
 });
