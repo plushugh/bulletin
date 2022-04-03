@@ -36,8 +36,8 @@ model Bulletin {
   content String
   code    String @unique
 
-  user   User   @relation(fields: [userId], references: [id], onDelete: SetNull)
-  userId String
+  user   User?   @relation(fields: [userId], references: [id], onDelete: SetNull)
+  userId String?
 }
 
 enum Role {
